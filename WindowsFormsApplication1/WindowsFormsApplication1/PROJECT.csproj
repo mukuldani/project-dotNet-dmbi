@@ -52,11 +52,29 @@
     <Compile Include="AddCompDetails.Designer.cs">
       <DependentUpon>AddCompDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="DisplayRankWise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayRankWise.Designer.cs">
+      <DependentUpon>DisplayRankWise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCompanyDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCompanyDetails.Designer.cs">
+      <DependentUpon>EditCompanyDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditProfile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditProfile.Designer.cs">
       <DependentUpon>EditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStudentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStudentDetails.Designer.cs">
+      <DependentUpon>EditStudentDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ProjectDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -109,8 +127,17 @@
     <EmbeddedResource Include="AddCompDetails.resx">
       <DependentUpon>AddCompDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DisplayRankWise.resx">
+      <DependentUpon>DisplayRankWise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCompanyDetails.resx">
+      <DependentUpon>EditCompanyDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditProfile.resx">
       <DependentUpon>EditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStudentDetails.resx">
+      <DependentUpon>EditStudentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>

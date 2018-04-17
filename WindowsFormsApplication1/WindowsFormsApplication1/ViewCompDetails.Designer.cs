@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.projectDataSet1 = new WindowsFormsApplication1.ProjectDataSet1();
-            this.compDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comp_DetailsTableAdapter = new WindowsFormsApplication1.ProjectDataSet1TableAdapters.Comp_DetailsTableAdapter();
             this.compidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compaddDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,9 +38,14 @@
             this.hrnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hremailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hrphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.compDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectDataSet1 = new WindowsFormsApplication1.ProjectDataSet1();
+            this.comp_DetailsTableAdapter = new WindowsFormsApplication1.ProjectDataSet1TableAdapters.Comp_DetailsTableAdapter();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.BtnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.compDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -64,20 +66,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(775, 268);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // projectDataSet1
-            // 
-            this.projectDataSet1.DataSetName = "ProjectDataSet1";
-            this.projectDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // compDetailsBindingSource
-            // 
-            this.compDetailsBindingSource.DataMember = "Comp_Details";
-            this.compDetailsBindingSource.DataSource = this.projectDataSet1;
-            // 
-            // comp_DetailsTableAdapter
-            // 
-            this.comp_DetailsTableAdapter.ClearBeforeFill = true;
             // 
             // compidDataGridViewTextBoxColumn
             // 
@@ -129,18 +117,53 @@
             this.hrphoneDataGridViewTextBoxColumn.HeaderText = "HR Phone";
             this.hrphoneDataGridViewTextBoxColumn.Name = "hrphoneDataGridViewTextBoxColumn";
             // 
+            // compDetailsBindingSource
+            // 
+            this.compDetailsBindingSource.DataMember = "Comp_Details";
+            this.compDetailsBindingSource.DataSource = this.projectDataSet1;
+            // 
+            // projectDataSet1
+            // 
+            this.projectDataSet1.DataSetName = "ProjectDataSet1";
+            this.projectDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comp_DetailsTableAdapter
+            // 
+            this.comp_DetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(244, 340);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.Location = new System.Drawing.Point(383, 340);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(75, 23);
+            this.BtnEdit.TabIndex = 2;
+            this.BtnEdit.Text = "Edit";
+            this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            // 
             // ViewCompDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 335);
+            this.ClientSize = new System.Drawing.Size(812, 375);
+            this.Controls.Add(this.BtnEdit);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ViewCompDetails";
             this.Text = "ViewCompDetails";
             this.Load += new System.EventHandler(this.ViewCompDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.compDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,5 +182,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hrnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hremailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hrphoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button BtnEdit;
     }
 }

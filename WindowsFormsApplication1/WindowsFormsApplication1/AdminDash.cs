@@ -19,7 +19,8 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            DisplayRankWise dr = new DisplayRankWise();
+            dr.Show();
         }
 
         private void btnAddStuDetails_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace WindowsFormsApplication1
         private void btnViewStuDetails_Click(object sender, EventArgs e)
         {
             ViewStudentDetails vs = new ViewStudentDetails();
-            vs.ShowDialog();
+            vs.Show();
         }
 
         private void btnAddCompDetails_Click(object sender, EventArgs e)
@@ -50,6 +51,11 @@ namespace WindowsFormsApplication1
         {
             EditProfile ep = new EditProfile();
             ep.ShowDialog();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

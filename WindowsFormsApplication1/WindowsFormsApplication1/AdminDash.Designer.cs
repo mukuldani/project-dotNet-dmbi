@@ -32,8 +32,7 @@
             this.btnViewStuDetails = new System.Windows.Forms.Button();
             this.btnAddCompDetails = new System.Windows.Forms.Button();
             this.btnViewCompDetails = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnGetRank = new System.Windows.Forms.Button();
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -82,25 +81,15 @@
             this.btnViewCompDetails.UseVisualStyleBackColor = true;
             this.btnViewCompDetails.Click += new System.EventHandler(this.btnViewCompDetails_Click);
             // 
-            // button5
+            // btnGetRank
             // 
-            this.button5.Location = new System.Drawing.Point(28, 164);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Function 1";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.AutoSize = true;
-            this.button6.Location = new System.Drawing.Point(185, 164);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Function 2";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnGetRank.Location = new System.Drawing.Point(28, 164);
+            this.btnGetRank.Name = "btnGetRank";
+            this.btnGetRank.Size = new System.Drawing.Size(75, 23);
+            this.btnGetRank.TabIndex = 4;
+            this.btnGetRank.Text = "Get Rank";
+            this.btnGetRank.UseVisualStyleBackColor = true;
+            this.btnGetRank.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnEditProfile
             // 
@@ -120,6 +109,7 @@
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // AdminDash
             // 
@@ -128,8 +118,7 @@
             this.ClientSize = new System.Drawing.Size(386, 290);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnEditProfile);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnGetRank);
             this.Controls.Add(this.btnViewCompDetails);
             this.Controls.Add(this.btnAddCompDetails);
             this.Controls.Add(this.btnViewStuDetails);
@@ -147,8 +136,7 @@
         private System.Windows.Forms.Button btnViewStuDetails;
         private System.Windows.Forms.Button btnAddCompDetails;
         private System.Windows.Forms.Button btnViewCompDetails;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnGetRank;
         private System.Windows.Forms.Button btnEditProfile;
         private System.Windows.Forms.Button btnLogout;
     }

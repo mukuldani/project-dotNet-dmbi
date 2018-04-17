@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.projectDataSet = new WindowsFormsApplication1.ProjectDataSet();
-            this.studentTableAdapter = new WindowsFormsApplication1.ProjectDataSetTableAdapters.StudentTableAdapter();
             this.stuIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.snameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +44,11 @@
             this.markssem4DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.livektDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deadktDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectDataSet = new WindowsFormsApplication1.ProjectDataSet();
+            this.studentTableAdapter = new WindowsFormsApplication1.ProjectDataSetTableAdapters.StudentTableAdapter();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectDataSet)).BeginInit();
@@ -72,24 +74,10 @@
             this.livektDataGridViewTextBoxColumn,
             this.deadktDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.studentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 86);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(883, 255);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.projectDataSet;
-            // 
-            // projectDataSet
-            // 
-            this.projectDataSet.DataSetName = "ProjectDataSet";
-            this.projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
             // 
             // stuIdDataGridViewTextBoxColumn
             // 
@@ -187,11 +175,46 @@
             this.deadktDataGridViewTextBoxColumn.Name = "deadktDataGridViewTextBoxColumn";
             this.deadktDataGridViewTextBoxColumn.Width = 45;
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.projectDataSet;
+            // 
+            // projectDataSet
+            // 
+            this.projectDataSet.DataSetName = "ProjectDataSet";
+            this.projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(305, 367);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(423, 367);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnRank_Click);
+            // 
             // ViewStudentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 353);
+            this.ClientSize = new System.Drawing.Size(892, 402);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ViewStudentDetails";
             this.Text = "ViewStudentDetails";
@@ -223,5 +246,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn markssem4DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn livektDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deadktDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
