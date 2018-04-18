@@ -12,9 +12,11 @@ namespace WindowsFormsApplication1
 {
     public partial class AdminDash : Form
     {
-        public AdminDash()
+        public int uid;
+        public AdminDash(int id)
         {
             InitializeComponent();
+            uid = id;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -49,8 +51,9 @@ namespace WindowsFormsApplication1
 
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
-            EditProfile ep = new EditProfile();
-            ep.ShowDialog();
+            EditProfile ep = new EditProfile(uid);
+            ep.Show();
+            this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

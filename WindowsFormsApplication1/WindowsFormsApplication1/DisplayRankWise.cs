@@ -26,9 +26,7 @@ namespace WindowsFormsApplication1
             con.ConnectionString = @"Data Source=MUKUL\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True";
             con.Open();
         }
-        string[] name = new string[100];
-        int[] id = new int[100];
-        int[] mgrad = new int[100];
+        
         int rowCount;
         private void DisplayRankWise_Load(object sender, EventArgs e)
         {
@@ -47,6 +45,9 @@ namespace WindowsFormsApplication1
                     rowCount++;
                 }
             }
+            string[] name = new string[rowCount];
+            int[] id = new int[rowCount];
+            int[] mgrad = new int[rowCount];
             while (sda.Read())
             {
                 for (int i = 0; i < rowCount; i++)
@@ -64,17 +65,17 @@ namespace WindowsFormsApplication1
                 {
                     if(mgrad[j] > mgrad[j+1])
                     {
-                        temp = id[j + 1];
-                        id[j + 1] = id[j];
-                        id[j] = temp;
-                        tempArr[i] = id[j];
+                        temp = mgrad[j + 1];
+                        mgrad[j + 1] = mgrad[j];
+                        mgrad[j] = temp;
+                        //tempArr[i] = id[j];
 
                     }
                 }           
             }
             for(int i=0;i <rowCount;i++)
             {
-                Console.WriteLine(tempArr[i]);
+                Console.WriteLine(mgrad[i]);
             }
         }
     }

@@ -58,9 +58,8 @@ namespace WindowsFormsApplication1
                     }
                     MessageBox.Show("Login Sucessfull. Welcome " + user_name);
                     con.Close();
-                    AdminDash ad = new AdminDash();
-                    this.Close();
-                    ad.ShowDialog();
+                    AdminDash ad = new AdminDash(uid);
+                    ad.Show();
                 }
                 else
                 {

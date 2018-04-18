@@ -17,11 +17,12 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
         public int cid;
+        int a;
         private void ViewCompDetails_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'projectDataSet1.Comp_Details' table. You can move, or remove it, as needed.
             this.comp_DetailsTableAdapter.Fill(this.projectDataSet1.Comp_Details);
-            AdminDash ad = new AdminDash();
+            AdminDash ad = new AdminDash(a);
             ad.Close();
         }
 

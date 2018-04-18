@@ -39,7 +39,8 @@ namespace WindowsFormsApplication1
 
         private void StudentDetails_Load(object sender, EventArgs e)
         {
-            AdminDash ad = new AdminDash();
+            int a = 0;
+            AdminDash ad = new AdminDash(a);
             ad.Close();
         }
 
@@ -86,7 +87,8 @@ namespace WindowsFormsApplication1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            AdminDash ad = new AdminDash();
+            int a = 0;
+            AdminDash ad = new AdminDash(a);
             ad.ShowDialog();
             this.Close();
         }

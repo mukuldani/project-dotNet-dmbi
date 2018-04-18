@@ -28,10 +28,10 @@ namespace WindowsFormsApplication1
             con.Open();
         }
 
-
+        int a = 0;
         private void AddCompDetails_Load(object sender, EventArgs e)
         {
-            AdminDash ad = new AdminDash();
+            AdminDash ad = new AdminDash(a);
             ad.Close();
         }
 
